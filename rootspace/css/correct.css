@@ -1,0 +1,22 @@
+body
+{
+	background-color: #ebf1fc;
+}
+
+.nav
+{
+	margin-bottom: 40px;
+}
+
+/*ADMIN*/
+.admin
+{
+	background-color: #fff;
+	padding: 50px;
+	border-radius: 10px;
+}
+
+.help-inline
+{
+	color:red;
+}

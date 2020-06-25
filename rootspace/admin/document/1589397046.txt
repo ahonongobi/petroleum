@@ -1,0 +1,65 @@
+Un arbre binaire est un ensemble de noeuds soit vides soit composé d'une racine et de deux abres binaires disjoints appelés  fils gauche t fils droit.
+Un noeud interne est un sommet qui a au moins un fils.
+Une feuille est un sommet qui n'a pas de fils 
+La hauteur d'un sommet est la longueur  du plus long chemin de x à une feuille
+la hauteur d'un arbre est égal à la hauteur de la racine
+
+Procédure Creerelement(var A:Arbre, X:Entier)
+
+debut:
+
+    si A=NULL  alors
+        Allouer (A);
+        A->val<-X;
+        A->Fils<-G<-NULL;
+        A->FilsD<-NULL;
+    sinon
+        si B->val->X
+            Creerelement(A->FilsG, X);
+        sinon
+            Creerelement(A->FilsD, X);
+        FinSi
+    FinSi
+FinSi
+
+Fonction Est_vide(A:Arbre):Booleen
+
+Debut
+
+    Si A=NULL alors
+        renvoyer Vrai;
+    sinon
+        renvoyer Faux;
+    FinSi
+Fin
+
+Fonction EstUneFeuilleVide(A:Arbre)
+Debut
+    Si (A->FilsG=NULL ET A->FilsD=NULL)
+        renvoyer Vrai;
+    Sinon
+        renvoyer Faux
+    FinSi
+Fin
+
+Fonction Recherche(A:Arbre, x:Entier) Booleen
+Debut   
+    Si estVide(A) alors
+        renvoyer Faux;
+    Sinon 
+        si A->val=X alors
+            renvoyer vrai;
+        sinon
+            si X>A->val alors
+                Recherche(A->FilsD, X);
+            sinon
+                Recherche(A->FilsG, X);
+            FinSi
+        FinSi
+    FinSi
+Fin
+
+LES PARCOURS
+*Parcours postfixé
+*Parcours préfixé
+Parcours infixé
